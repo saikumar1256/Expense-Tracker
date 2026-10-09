@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>💰 My Expense Tracker</h1>
+
+    <div class="box">
+        <h2>My Salary</h2>
+        <input type="number" id="salary" placeholder="Enter total salary">
+        <button onclick="saveSalary()">Save Salary</button>
+    </div>
+
+    <div class="summary">
+        <div class="card green">
+            <h3>Total Salary</h3>
+            <p>₹<span id="totalSalary">0</span></p>
+        </div>
+
+        <div class="card red">
+            <h3>Total Spent</h3>
+            <p>₹<span id="totalSpent">0</span></p>
+        </div>
+
+        <div class="card blue">
+            <h3>Balance</h3>
+            <p>₹<span id="balance">0</span></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Add New Expense</h2>
+
+        <label>Category</label>
+        <select id="category">
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Education</option>
+            <option>Bills</option>
+            <option>Health</option>
+            <option>Other</option>
+        </select>
+
+        <label>Amount (₹)</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+
+        <label>Date</label>
+        <input type="date" id="date">
+
+        <label>Note (Optional)</label>
+        <input type="text" id="note" placeholder="Example: Lunch">
+
+        <button onclick="addTransaction()">+ Add Transaction</button>
+    </div>
+
+    <div class="box">
+        <h2>📋 All Transactions</h2>
+        <p id="empty">No transactions yet.</p>
+
+        <div id="history"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
